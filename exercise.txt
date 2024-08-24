@@ -1,0 +1,8 @@
+S1
+2. Có thể move/dời class chứa hàm main sang nơi khác không? Vì sao?
+Có thể dời lớp chứa hàm main (ví dụ DemoApplication) sang nơi khác trong cấu trúc thư mục, miễn là:
+Lớp này vẫn nằm trong phạm vi quét của Spring Boot (nằm cùng package hoặc package con của lớp chính).
+Bạn cũng cần phải điều chỉnh package trong lớp để phù hợp với vị trí mới của nó.
+Vì:Spring Boot sử dụng cơ chế quét component để phát hiện các bean và cấu hình trong ứng dụng.
+Nếu bạn di chuyển lớp main ra ngoài phạm vi quét của Spring Boot, Spring sẽ không tìm thấy các thành phần cần thiết, dẫn đến lỗi.
+Vì vậy, đảm bảo lớp này nằm trong phạm vi quét là rất quan trọng.
