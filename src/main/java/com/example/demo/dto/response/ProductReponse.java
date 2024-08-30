@@ -12,6 +12,8 @@ public class ProductReponse {
 
     private Double price;
 
+    private CategoryResponse category;
+
     public Long getId() {
         return id;
     }
@@ -50,5 +52,13 @@ public class ProductReponse {
 
     public void setPrice(Double price) {
         this.price = price;
+    }
+
+    public CategoryResponse getCategory() {
+        return category;
+    }
+
+    public void setCategory(CategoryResponse category) {
+        this.category = category;
     }
 }

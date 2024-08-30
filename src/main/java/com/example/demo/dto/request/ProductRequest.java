@@ -12,6 +12,8 @@ public class ProductRequest {
     private Integer quantity;
 
     private Double price;
+
+    private Long categoryId;
 //
 //    public Long getId() {
 //        return id;
@@ -51,5 +53,13 @@ public class ProductRequest {
 
     public void setPrice(Double price) {
         this.price = price;
+    }
+
+    public Long getCategoryId() {
+        return categoryId;
+    }
+
+    public void setCategoryId(Long categoryId) {
+        this.categoryId = categoryId;
     }
 }

@@ -20,6 +20,9 @@ public class Product {
     @Basic(optional = false)
     private Double price;
 
+    @ManyToOne
+    private Category category;
+
     public Long getId() {
         return id;
     }
@@ -58,5 +61,13 @@ public class Product {
 
     public void setPrice(Double price) {
         this.price = price;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 }
