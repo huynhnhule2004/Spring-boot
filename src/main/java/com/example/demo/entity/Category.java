@@ -1,5 +1,6 @@
 package com.example.demo.entity;
 
+import com.example.demo.dto.response.CategoryResponse;
 import jakarta.persistence.*;
 
 import java.util.List;
@@ -40,4 +41,5 @@ public class Category {
     public void setProducts(List<Product> products) {
         this.products = products;
     }
+
 }
