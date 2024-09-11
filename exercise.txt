@@ -6,3 +6,22 @@ Bạn cũng cần phải điều chỉnh package trong lớp để phù hợp v�
 Vì:Spring Boot sử dụng cơ chế quét component để phát hiện các bean và cấu hình trong ứng dụng.
 Nếu bạn di chuyển lớp main ra ngoài phạm vi quét của Spring Boot, Spring sẽ không tìm thấy các thành phần cần thiết, dẫn đến lỗi.
 Vì vậy, đảm bảo lớp này nằm trong phạm vi quét là rất quan trọng.
+
+S3+S4
+
+1. Nghiên cứu @ManyToMany và viết demo
+@ManyToMany là một loại quan hệ trong JPA (Java Persistence API) dùng để mô tả mối quan hệ nhiều-nhiều giữa hai thực thể.
+Trong một quan hệ nhiều-nhiều, mỗi thực thể có thể liên kết với nhiều thực thể khác và ngược lại. Để triển khai mối quan hệ này, JPA tạo ra một bảng trung gian để lưu trữ các khóa ngoại từ cả hai bảng.
+Ví dụ về @ManyToMany: Giả sử chúng ta có hai thực thể Student và Course.
+Mỗi sinh viên có thể đăng ký nhiều khóa học, và mỗi khóa học có thể có nhiều sinh viên tham gia.
+
+2. Nghiên cứu @OneToOne, nó khác gì @ManyToOne?
+@OneToOne: Mỗi bản ghi của một thực thể chỉ liên kết với duy nhất một bản ghi của thực thể khác.
+Đây là mối quan hệ 1-1.
+@ManyToOne: Nhiều bản ghi của một thực thể có thể liên kết với một bản ghi duy nhất của thực thể khác.
+Đây là mối quan hệ nhiều-1.
+Ví dụ về @OneToOne: Giả sử chúng ta có thực thể User và Profile. Mỗi user có một profile và ngược lại.
+
+3. Nghiên cứu quan hệ 2 chiều (bidirectional relationship), chú ý mappedBy
+Quan hệ hai chiều (bidirectional) cho phép cả hai thực thể tham chiếu lẫn nhau. Điều này giúp duy trì mối quan hệ dễ dàng từ cả hai phía của thực thể.
+mappedBy: Sử dụng mappedBy ở phía thực thể không sở hữu mối quan hệ để cho JPA biết rằng mối quan hệ này đã được quản lý bởi một thuộc tính ở thực thể đối diện.
