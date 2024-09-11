@@ -1,7 +1,6 @@
 package com.example.demo.entity;
 
 import jakarta.persistence.*;
-import org.springframework.context.annotation.Profile;
 
 @Entity
 public class User {
@@ -13,8 +12,9 @@ public class User {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "profile_id", referencedColumnName = "id")
-    private Profile profile;
+    private Profile profile; // Sử dụng đúng thực thể Profile của bạn
 
+    // Getters và Setters
     public Long getId() {
         return id;
     }
@@ -38,6 +38,4 @@ public class User {
     public void setProfile(Profile profile) {
         this.profile = profile;
     }
-
-    // Getters và Setters
 }

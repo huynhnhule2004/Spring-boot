@@ -10,11 +10,10 @@ public class Profile {
 
     private String bio;
 
-    @OneToOne(mappedBy = "profile")
+    @OneToOne(mappedBy = "profile") // Quan hệ hai chiều với User
     private User user;
 
     // Getters và Setters
-
     public Long getId() {
         return id;
     }
